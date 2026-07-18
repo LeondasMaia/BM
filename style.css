@@ -105,6 +105,42 @@ h3 {
   width: 100%;
 }
 
+/* Botão hambúrguer — escondido no desktop, aparece só no mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 110;
+  flex-shrink: 0;
+}
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+}
+/* Anima o ícone para um "X" quando o menu está aberto */
+body.menu-open .hamburger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: var(--gold);
+}
+body.menu-open .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+body.menu-open .hamburger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: var(--gold);
+}
+
 .social {
   display: flex;
   gap: 18px;
@@ -653,11 +689,69 @@ footer p {
 }
 
 @media (max-width: 900px) {
-  /* Header */
+  /* Header: continua em linha, mas agora só com logo + hambúrguer */
   .header {
-    padding: 15px;
+    padding: 0 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+  .header .logo {
+    height: 46px;
+    top: 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  /* Nav vira um painel fixo em tela cheia, escondido fora da tela */
+  .header nav#main-nav {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 64px);
+    background: rgba(5, 5, 5, 0.98);
+    display: flex;
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 99;
+  }
+  body.menu-open .header nav#main-nav {
+    transform: translateX(0);
+  }
+  .header nav a {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  /* Ícones sociais somem do header e reaparecem dentro do painel do menu */
+  .header .social {
+    position: fixed;
+    top: auto;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    gap: 28px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease 0.1s;
+    z-index: 100;
+  }
+  body.menu-open .header .social {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Trava o scroll do fundo enquanto o menu está aberto */
+  body.menu-open {
+    overflow: hidden;
   }
 
   /* Split sections */

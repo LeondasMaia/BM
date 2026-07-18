@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbearia Maia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/logo_minimalista.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ============================================================
+         HEADER / NAVBAR — links com active via scroll
+         ============================================================ -->
+    <header class="header" id="navbar">
+      <img
+        src="images/logo_minimalista.png"
+        alt="Logo Barbearia Maia"
+        class="logo"
+      />
+      <nav id="main-nav">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#nossa-marca" class="nav-link" data-section="nossa-marca"
+          >Nossa Marca</a
+        >
+        <a href="#produtos" class="nav-link" data-section="produtos"
+          >Produtos</a
+        >
+        <a href="#servicos-lista" class="nav-link" data-section="servicos-lista"
+          >Serviços</a
+        >
+        <a href="#localizacao" class="nav-link" data-section="localizacao"
+          >Localização</a
+        >
+        <a href="#agende" class="nav-link" data-section="agende">Agende</a>
+      </nav>
+      <div class="social">
+        <a href="https://www.instagram.com/barbearia.maia_/" target="_blank">
+          <img src="images/instagram.png" alt="Instagram" class="icon" />
+        </a>
+        <a href="https://wa.me/5584996605395" target="_blank">
+          <img src="images/whatsapp.png" alt="WhatsApp" class="icon" />
+        </a>
+      </div>
+    </header>
+
+    <!-- ============================================================
+         HERO: Carrossel + logo centralizada
+         ============================================================ -->
+    <section id="home" class="hero-carousel">
+      <div
+        class="carousel-slide active"
+        style="background-image: url(&quot;images/serviço.png&quot;)"
+      ></div>
+      <div
+        class="carousel-slide"
+        style="background-image: url(&quot;images/Time.jpg&quot;)"
+      ></div>
+      <div
+        class="carousel-slide"
+        style="background-image: url(&quot;images/unha_final.jpg&quot;)"
+      ></div>
+
+      <div class="hero-overlay">
+        <div class="hero-logo-wrapper">
+          <img src="images/logo.png" alt="Barbearia Maia" class="hero-logo" />
+        </div>
+      </div>
+
+      <button class="carousel-arrow left-arrow" onclick="plusSlides(-1)">
+        &#10094;
+      </button>
+      <button class="carousel-arrow right-arrow" onclick="plusSlides(1)">
+        &#10095;
+      </button>
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         NOSSA MARCA
+         ============================================================ -->
+    <section id="nossa-marca" class="split-section reverse">
+      <div class="text-content dark-bg">
+        <h2>Nossa Marca</h2>
+        <p>
+          Inspirada nas barbearias clássicas, a Barbearia Maia chega com a
+          intenção de resgatar o cuidado masculino com o melhor atendimento da
+          região.
+        </p>
+        <p>
+          Conheça também o Barbeiro <strong>João Alexandre</strong>, atuando há
+          2 anos trazendo excelência e dedicação ao estilo clássico e moderno.
+        </p>
+      </div>
+      <div
+        class="parallax-half"
+        style="background-image: url(&quot;images/Camisa.jpg&quot;)"
+      ></div>
+    </section>
+
+    <!-- ============================================================
+         PRODUTOS
+         ============================================================ -->
+    <section id="produtos" class="split-section">
+      <div class="text-content dark-bg center-text">
+        <h2 class="title-large">PRODUTOS<br />MAIA</h2>
+        <p>
+          Desenvolvemos uma linha de Produtos Especiais para barba, cabelo e
+          bigode. Qualidade premium para manter o seu estilo em casa.
+        </p>
+        <a
+          href="https://online.maapp.com.br/Barbeariamaia2024"
+          class="btn-outline"
+          target="_blank"
+          rel="noopener"
+          >Confira</a
+        >
+      </div>
+      <div
+        class="parallax-half"
+        style="background-image: url(&quot;images/produtos.jpg&quot;)"
+      ></div>
+    </section>
+
+    <!-- ============================================================
+         SERVIÇOS
+         ============================================================ -->
+    <section id="servicos-lista" class="services-list-section">
+      <h2 class="section-title dark-text text-center">NOSSOS SERVIÇOS</h2>
+      <div class="vintage-container">
+        <div class="vintage-frame">
+          <div class="service-info">
+            <h3 class="gold-title">CORTE SOCIAL</h3>
+            <p>
+              Um corte clássico e atemporal, feito com tesoura e máquina para um
+              acabamento perfeito. Ideal para o dia a dia, mantendo a elegância
+              e a praticidade em qualquer ocasião.
+            </p>
+          </div>
+        </div>
+
+        <div class="vintage-frame">
+          <div class="service-info">
+            <h3 class="gold-title">BARBA</h3>
+            <p>
+              Modelagem e alinhamento completo da barba, com uso de toalha
+              quente e navalha para um barbear suave e relaxante, finalizado com
+              óleos e balms hidratantes.
+            </p>
+          </div>
+        </div>
+
+        <div class="vintage-frame">
+          <div class="service-info">
+            <h3 class="gold-title">BARBOTERAPIA</h3>
+            <p>
+              Um verdadeiro ritual de relaxamento. Inclui massagem facial,
+              toalha quente, cremes especiais para amolecer os fios e hidratação
+              profunda da pele e da barba.
+            </p>
+          </div>
+        </div>
+
+        <div class="vintage-frame">
+          <div class="service-info">
+            <h3 class="gold-title">PIGMENTAÇÃO</h3>
+            <p>
+              Ideal para disfarçar falhas, cabelos brancos ou realçar o contorno
+              da barba e do cabelo. Utilizamos produtos de alta qualidade para
+              um resultado natural.
+            </p>
+          </div>
+        </div>
+
+        <div class="vintage-frame">
+          <div class="service-info">
+            <h3 class="gold-title">DEPILAÇÃO NASAL</h3>
+            <p>
+              Remoção rápida e segura dos pelos indesejados do nariz utilizando
+              cera apropriada. Um toque final essencial para a higiene e
+              aparência impecável.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LOCALIZAÇÃO
+         ============================================================ -->
+    <section id="localizacao" class="split-section reverse">
+      <div class="text-content dark-bg">
+        <h2 class="city-title">Mossoró</h2>
+        <p class="address">Maisa - Ur2 ,Quadra 4 ,casa 2</p>
+        <div class="hours-card">
+          <h3>Horários</h3>
+          <p>Segunda a Sexta: 8h às 12h - 14h às 20h</p>
+          <p>Domingo: 9h às 13h</p>
+        </div>
+      </div>
+      <div
+        class="parallax-half"
+        style="background-image: url(&quot;images/interno_barbearia.jpg&quot;)"
+      ></div>
+    </section>
+
+    <!-- ============================================================
+         AGENDAMENTO — inspirado na referência: faixas diagonais + 3 cards
+         ============================================================ -->
+    <section id="agende" class="booking-section">
+      <!-- Faixas diagonais decorativas de fundo -->
+      <div class="booking-stripe booking-stripe-1"></div>
+      <div class="booking-stripe booking-stripe-2"></div>
+      <div class="booking-stripe booking-stripe-3"></div>
+
+      <div class="booking-inner">
+        <!-- Bloco de texto à esquerda -->
+        <div class="booking-text-col">
+          <h2 class="booking-main-title">AGENDE PELO<br />NOSSO SITE</h2>
+          <p class="booking-desc">
+            Agende um horário conosco clicando nos ícones abaixo e acesse nossa
+            plataforma de agendamento online.
+          </p>
+        </div>
+
+        <!-- Três cards quadrados -->
+        <div class="booking-cards">
+          <!-- Card: Barba -->
+          <a
+            href="https://online.maapp.com.br/Barbeariamaia2024"
+            class="bcard"
+            target="_blank"
+          >
+            <div class="bcard-photo-wrap">
+              <img src="images/barba.jpg" alt="Barba" class="bcard-photo" />
+              <div class="bcard-overlay"></div>
+              <!-- Ícone SVG: navalha -->
+              <img
+                class="bcard-icon-img"
+                src="images/lamina_barbear(1).png"
+                alt="Navalha"
+              />
+            </div>
+            <div class="bcard-label">BARBA</div>
+          </a>
+
+          <!-- Card: Cabelo -->
+          <a
+            href="https://online.maapp.com.br/Barbeariamaia2024"
+            class="bcard"
+            target="_blank"
+          >
+            <div class="bcard-photo-wrap">
+              <img src="images/cabelo.png" alt="Cabelo" class="bcard-photo" />
+              <div class="bcard-overlay"></div>
+              <!-- Ícone SVG: tesoura -->
+              <img
+                class="bcard-icon-img"
+                src="images/tesouro(1).png"
+                alt="Tesoura"
+              />
+            </div>
+            <div class="bcard-label">CABELO</div>
+          </a>
+
+          <!-- Card: Cabelo & Barba -->
+          <a
+            href="https://online.maapp.com.br/Barbeariamaia2024"
+            class="bcard bcard-highlight"
+            target="_blank"
+          >
+            <div class="bcard-photo-wrap">
+              <img
+                src="images/barba_cabelo.jpg"
+                alt="Cabelo & Barba"
+                class="bcard-photo"
+              />
+              <div class="bcard-overlay"></div>
+              <!-- Ícone SVG: tesoura + navalha + sinal de + -->
+              <img
+                class="bcard-icon-img"
+                src="images/barberpole.png"
+                alt="Cabelo e Barba"
+              />
+            </div>
+            <div class="bcard-label">CABELO & BARBA</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         RODAPÉ
+         ============================================================ -->
+    <footer>
+      <img src="images/logo.png" alt="Logo Barbearia Maia" />
+      <p>&copy; 2026 Barbearia Maia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

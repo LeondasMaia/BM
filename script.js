@@ -99,3 +99,30 @@ function handleScroll() {
     header.classList.remove("scrolled");
   }
 }
+
+/* ================================================================
+   MENU MOBILE (hambúrguer)
+   ================================================================ */
+const hamburger = document.getElementById("hamburger");
+const mainNav = document.getElementById("main-nav");
+
+hamburger.addEventListener("click", () => {
+  const isOpen = document.body.classList.toggle("menu-open");
+  hamburger.setAttribute("aria-expanded", isOpen);
+});
+
+// Fecha o menu ao clicar em qualquer link
+mainNav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.body.classList.remove("menu-open");
+    hamburger.setAttribute("aria-expanded", "false");
+  });
+});
+
+// Fecha o menu se a tela for redimensionada para desktop
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 900) {
+    document.body.classList.remove("menu-open");
+    hamburger.setAttribute("aria-expanded", "false");
+  }
+});
